@@ -4,7 +4,7 @@ data "aws_iam_policy_document" "kms_policy" {
     effect  = "Allow"
     principals {
       type = "AWS"
-      identrifiers = ["*"]
+      identifiers = ["*"]
     }
     actions = ["kms:*"]
     resources = ["*"]
