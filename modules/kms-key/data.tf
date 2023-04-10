@@ -2,7 +2,7 @@ data "aws_iam_policy_document" "kms_policy" {
   statement {
     sid = "Enable IAM User Permission"
     effect  = "Allow"
-    principal {
+    principals {
       type = "AWS"
       identrifiers = ["*"]
     }
