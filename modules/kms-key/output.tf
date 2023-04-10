@@ -5,5 +5,5 @@ output "kms_key_arn" {
 
 output "kms_alias_arn" {
   description = "The ARN of the KMS key alias"
-  value       = aws_kms_alias.my_kms_alias.arn
+  value       = aws_kms_alias.kms_key_alias.arn
 }
