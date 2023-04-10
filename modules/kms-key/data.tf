@@ -1,10 +1,13 @@
+data "aws_caller_identity" "current" {}
+
 data "aws_iam_policy_document" "kms_policy" {
   statement {
     sid = "Enable IAM User Permission"
     effect  = "Allow"
     principals {
       type = "AWS"
-      identifiers = ["*"]
+      #identifiers = ["*"]
+      identifiers = [data.aws_caller_identity.current.arn]
     }
     actions = ["kms:*"]
     resources = ["*"]
